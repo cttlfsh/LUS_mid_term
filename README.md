@@ -1,4 +1,4 @@
-# Language Understanding System: midterm project
+# Language Understanding System: mid-term project
 
 Student: Andrea Montagner
 ID:189514
