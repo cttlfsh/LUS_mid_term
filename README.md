@@ -1,2 +1,6 @@
-# LUS_mid_term
-First Project of Language Understanding System Course
+# Language Understanding System: midterm project
+
+Student: Andrea Montagner
+ID:189514
+
+Spring 2018
