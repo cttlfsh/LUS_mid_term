@@ -1,8 +1,21 @@
+'''	
+LUS mid_term project, Spring 2018
+Student: Andrea Montagner, id:189514
+
+# Simple pyhton script which split the file given as input    
+# in two files, one with the words and one with the labels.   
+# It was not mandatory but help keep the understanding clear  
+# later on.													 
+#															 
+# Do not run it, it is automatically called when 'toAtuomata.py' 
+# is called.                                                  
+
+'''
 train_pos = []
 words = []
 labels = []
 
-with open("../data/data/NLSPARQL.test.data", "r") as f:
+with open("../data/data/NLSPARQL.train.data", "r") as f:
 	train_pos = f.readlines()
 	#print(train_pos)
 
