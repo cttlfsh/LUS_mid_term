@@ -27,12 +27,12 @@ unique_wrd = list(set(words))
 unique_lab = list(set(labels))
 
 ### Create the file of the words
-with open("../text_files/words.txt", "w") as f:
+with open("../files/words.txt", "w") as f:
 	for l in unique_wrd:
 		f.write(l + "\n")
 	
 ### Create the file of the labels
-with open("../text_files/labels.txt", "w") as f:
+with open("../f iles/labels.txt", "w") as f:
 	for l in unique_lab:
 		f.write(l)
 
