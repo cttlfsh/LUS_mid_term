@@ -7,7 +7,8 @@ Main file of the project, it computes sequence labeling using words
 and labels.
 It start from computing the unigram probabilities and frequencies up 
 unitl the bigram probabilities and frequencies, creating at the end
-the automaton as 'automata.txt'
+the automaton as 'automaton.txt' and the files that will be used to 
+generate the lexicon
 '''
 
 from collections import Counter
@@ -35,38 +36,45 @@ def probability_bigram(freq_unig, freq_bigr):
 		prob_bigr.append([tup, freq_bigr[tup], float(float(freq_couple[tup])/freq_IOB[tup[1]])])
 	return prob_bigr 
 
-### Lists needed to compute frequency and probabilities of dataset
+################# Necessary initializations
+### Train lists
 sentence = []
 words = []
 IOB = []
 word_list_final = []
 IOB_list_final = []
-### All necessary initializations
 cut_off = []
 automaton = []
+lexicon = []
 remove_sentence = []
 to_be_deleted = []
 nbr_to_delete = []
+IOB_sentence = []
+### Test lists
+words_sentence = []
 
 ### Input requests 
 ### Train file
-#train_file = sys.argv[1]
+#train_file = sys.argv[1] # "../data/data/NLSPARQL.train.data"
 ### Test_file
-#test_file = sys.argv[2]
+#test_file = sys.argv[2] # "../data/data/NLSPARQL.test.data"
 ### Threshold for the cut-off
-#threshold = sys.argv[3]
-threshold = 5
+threshold = 0#sys.argv[1]
+
 
 with open("../data/data/NLSPARQL.train.data", "r") as f:
+	IOB_snt = ""
 	for line in f:
 		if(line != "\n"):
+			IOB_snt = IOB_snt + str(line.split("\t")[1][:-1]) + "\t"
 			### Create a list of tuple (word, IOB)
  			sentence.append([line.split("\t")[0], line.split("\t")[1][:-1]])
  			### Create a list of words
  			words.append(line.split("\t")[0])
  			IOB.append(line.split("\t")[1][:-1])
  		else:
- 			continue
+ 			IOB_sentence.append(IOB_snt[:-1])
+ 			IOB_snt = ""
 
 '''
  Compute the frequency of each word.
@@ -99,6 +107,15 @@ for key,value in nbr_to_delete.items():
 ### Remove the cut-off from the sentence
 for el in remove_sentence:
 	sentence.remove(el)
+
+with open("../data/data/NLSPARQL.test.data","r") as f:
+	words_snt = ""
+	for line in f:
+		if(line != "\n"):
+			words_snt = words_snt + str(line.split("\t")[0]) + "\t"
+ 		else:
+ 			words_sentence.append(words_snt[:-1])
+ 			words_snt = ""
 
 '''
  Compute the frequency for each bigram
@@ -143,20 +160,29 @@ for iob in freq_IOB:
 		prob_IOB = float(freq_IOB[iob])/float(sum(val for key,val in freq_IOB.items()))
 		automaton.append([("<unk>", iob), str(-math.log(1-prob_IOB))])
 
-### Keep track of words and IOB in order to create the lexicon
+### Keep track of words and IOB (AFTER the eventual cut-off) in order to create the lexicon
 for element in automaton:
 	word_list_final.append(element[0][0]) 
 	IOB_list_final.append(element[0][1])
 word_list_final = set(word_list_final)
 IOB_list_final = set(IOB_list_final)
+### Actually fill the lexicon list
+for element in word_list_final:
+	lexicon.append(element)
+for element in IOB_list_final:
+	lexicon.append(element)
 
-
-with open("../files/words.txt", "w") as f:
-	for element in word_list_final:
-		f.write(element+"\n")
-with open("../files/IOB.txt", "w") as f:
-	for element in IOB_list_final:
-		f.write(element+"\n")
+### Generate all necessary files
+with open("../files/test_words_by_sentence.txt", "w") as f:
+	for line in words_sentence:
+		f.write(str(line) + "\n")
+with open("../files/train_IOB_by_sentence.txt", "w") as f:
+	for line in IOB_sentence:
+		f.write(str(line) + "\n")
+with open("../files/lexicon.txt", "w") as f:
+	f.write("<eps>"+"\t"+"0"+"\n")
+	for key, value in enumerate(lexicon):
+		f.write(str(value+"\t"+str(key+1)+"\n"))
 with open("../files/automaton.txt", "w") as f:
 	for element in automaton:
 		f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")
