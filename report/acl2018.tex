@@ -18,7 +18,7 @@
 
 \usepackage{url}
 
-%\aclfinalcopy % Uncomment this line for the final submission
+\aclfinalcopy % Uncomment this line for the final submission
 %\def\aclpaperid{***} %  Enter the acl Paper ID here
 
 %\setlength\titlebox{5cm}
@@ -29,59 +29,30 @@
 
 \newcommand\BibTeX{B{\sc ib}\TeX}
 
-\title{Instructions for ACL 2018 Proceedings}
+\title{Language Understanding System: Mid-term Project}
 
-\author{First Author \\
-  Affiliation / Address line 1 \\
-  Affiliation / Address line 2 \\
-  Affiliation / Address line 3 \\
-  {\tt email@domain} \\\And
-  Second Author \\
-  Affiliation / Address line 1 \\
-  Affiliation / Address line 2 \\
-  Affiliation / Address line 3 \\
-  {\tt email@domain} \\}
+\author{Montagner Andrea \\
+  {\tt andrea.montagner@studenti.unitn.it}}
 
-\date{}
+\date{\today}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-  This document contains the instructions for preparing a camera-ready
-  manuscript for the proceedings of ACL 2018. The document itself
-  conforms to its own specifications, and is therefore an example of
-  what your manuscript should look like. These instructions should be
-  used for both papers submitted for review and for final versions of
-  accepted papers.  Authors are asked to conform to all the directions
-  reported in this document.
+The aim of this project is to develop o Spoken Language Understanding module for the Movie Domain capable of performing PoS tagging. In order to achieve this goal a language model is firstly created and then trained to predict unseen utterances from a testing pool of data. In the following sections multiple approaches with respective solutions are presented, each one evaluated in term of accuracy, precision, recall and f1 score. Finally these results are compared to each other in order to determine the best approach ti this problem.
 \end{abstract}
-
-\section{Credits}
-
-This document has been adapted from the instructions for earlier ACL
-and NAACL proceedings, including those for ACL 2017 by Dan Gildea and
-Min-Yen Kan, NAACL 2017 by Margaret Mitchell, ACL 2012 by Maggie Li
-and Michael White, those from ACL 2010 by Jing-Shing Chang and Philipp
-Koehn, those for ACL 2008 by Johanna D. Moore, Simone Teufel, James
-Allan, and Sadaoki Furui, those for ACL 2005 by Hwee Tou Ng and Kemal
-Oflazer, those for ACL 2002 by Eugene Charniak and Dekang Lin, and
-earlier ACL and EACL formats. Those versions were written by several
-people, including John Chen, Henry S. Thompson and Donald
-Walker. Additional elements were taken from the formatting
-instructions of the {\em International Joint Conference on Artificial
-  Intelligence} and the \emph{Conference on Computer Vision and
-  Pattern Recognition}.
 
 \section{Introduction}
 
-The following instructions are directed to authors of papers submitted
-to ACL 2018 or accepted for publication in its proceedings. All
-authors are required to adhere to these specifications. Authors are
-required to provide a Portable Document Format (PDF) version of their
-papers. \textbf{The proceedings are designed for printing on A4
-paper.}
+A Concept Tagger is a module which is capable of assigning a concept, in this case a tag, to words belonging to a sentence. This operation, though, requires the presence of train and test datasets composed by couples (words, tag).\\
+In particular, the material that was provided for this project was:
+\begin{itemize}
+	\item A train dataset, both for the Movie Domain and for the additional features
+	\item A test dataset, both for the Movie Domain and for the additional features
+	\item A Perl script, {\tt "conlleval.pl"}, to evaluate the performances in terms of accuracy, precision, recall and f1 score.
+\end{itemize}
 
-\section{General Instructions}
+\section{Data Analysis}
 
 Manuscripts must be in two-column format.  Exceptions to the
 two-column format include the title, authors' names and complete
@@ -496,7 +467,7 @@ A simple criterion: All curves and points in your figures should be clearly dist
 %% \url{http://dlmf.nist.gov/LaTeXML/manual/included.bindings}
 % END: remove
 
-\section{Translation of non-English Terms}
+\section{Evaluation: Baseline method}
 
 It is also advised to supplement non-English characters and terms
 with appropriate transliterations and/or translations
@@ -504,7 +475,7 @@ since not all readers understand all such characters and terms.
 Inline transliteration or translation can be represented in
 the order of: original-form transliteration ``translation''.
 
-\section{Length of Submission}
+\section{Other approaches: different training methods}
 \label{sec:length}
 
 The ACL 2018 main conference accepts submissions of long papers and
@@ -533,7 +504,8 @@ review.
 Workshop chairs may have different rules for allowed length and
 whether supplemental material is welcome. As always, the respective
 call for papers is the authoritative source.
-
+\section{Error Analysis}
+\section{Discussion}
 \section*{Acknowledgments}
 
 The acknowledgments should go immediately before the references.  Do not number the acknowledgments section ({\em i.e.}, use \verb|\section*| instead of \verb|\section|). Do not include this section when submitting your paper for review.

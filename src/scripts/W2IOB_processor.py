@@ -9,6 +9,7 @@ It start from computing the unigram probabilities and frequencies up
 unitl the bigram probabilities and frequencies, creating at the end
 the automaton as 'automaton.txt' and the files that will be used to 
 generate the lexicon
+
 '''
 
 from collections import Counter
@@ -59,7 +60,7 @@ words_sentence = []
 ### Test_file
 #test_file = sys.argv[2] # "../data/data/NLSPARQL.test.data"
 ### Threshold for the cut-off
-threshold = 0#sys.argv[1]
+threshold = 50#sys.argv[1]
 
 
 with open("../data/data/NLSPARQL.train.data", "r") as f:
@@ -89,8 +90,19 @@ with open("../data/data/NLSPARQL.train.data", "r") as f:
 '''
 freq_words = frequency_unigram(words)
 freq_IOB = frequency_unigram(IOB)
-# print(freq_IOB)
-# print("\n\n\n")
+sorted_IOBs = freq_IOB.most_common()
+sorted_words = freq_words.most_common()
+#print(sorted_IOBs)
+
+# ### Save in a file this list to have distributions for the report ###
+# with open("IOB_distribution.txt", "w") as f:
+#  	for ut in sorted_IOBs:
+# 		f.write(str(ut[0])+"\t"+str(ut[1])+"\n")
+# ### Save in a file this list to have distributions for the report ###
+# with open("words_distribution.txt", "w") as f:
+# 	for ut in sorted_words:
+# 		f.write(str(ut[0])+"\t"+str(ut[1])+"\n")
+
 for el in sentence:
 	if (threshold != 0):
 		if (freq_words[el[0]] < threshold):

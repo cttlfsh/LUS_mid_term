@@ -21,7 +21,7 @@
 
 train_file="../data/data/NLSPARQL.train.data" #$1
 test_file="../data/data/NLSPARQL.test.data" #$2
-threshold=0 #$3
+threshold=$1
 method_list="methods_list.txt"
 
 if [[ "$threshold" = "0" ]]; then
@@ -34,7 +34,7 @@ fi
 mkdir $folder
 mkdir "$folder"/results
 mkdir "$folder/results"/evaluations
-mkdir "$folder/results"/automata
+mkdir "$folder/results"/predictions
 mkdir "$folder"/files
 mkdir "$folder"/methods
 ### Call the python script which outputs necessary
@@ -59,6 +59,7 @@ do
 	for i in $(seq 1 $max_ngram_order)
 	do
 		echo "Method: $method - Ngram_order: $i"
+		echo "Processing..."
 		mkdir "$folder/methods/$method"/ngramOrder$i
 		ngramcount --order=$i --require_symbols=false $folder/train_IOBs.far > $folder/methods/$method/ngramOrder$i/train_IOBs.cnt
 		ngrammake --method=$method $folder/methods/$method/ngramOrder$i/train_IOBs.cnt > $folder/methods/$method/ngramOrder$i/language_model.lm
@@ -69,20 +70,28 @@ do
 			### TODO: big todo, the following line is not working, it outputs an empty file instead of creating the automa
 			### more detailed analysis: the command which seems not to work properly is 'fstcompose - $folder/$method/ngramOrder$i/language_model.lm'
 			fstcompose 1.fst $folder/word2IOB.fst | fstcompose - $folder/methods/$method/ngramOrder$i/language_model.lm | fstrmepsilon | fstshortestpath | fsttopsort | fstprint --isymbols=$lexicon --osymbols=$lexicon >> $folder/methods/$method/ngramOrder$i/automa.txt
-			((counter++))
+			# if [[ counter == 271 ]]; then
+			# 	echo "Status: 25%"
+			# else if [[ counter == 542 ]]; then
+			# 	echo "Status: 50%"
+			# else if [[ counter == 813 ]]; then
+			# 	echo "Status: 75%"
+			# fi
+			 ((counter++))
 			echo "Processed the $counter line: $line"
 		done < $test_sentence
 
 		awk '{print $4}' < $folder/methods/$method/ngramOrder$i/automa.txt | awk -v RS= -v ORS="\n\n" "1" > tmp_output.txt
-		paste $test_file tmp_output.txt > "$folder/results"/results_$method"_ngramOrder"$i.txt
+		paste $test_file tmp_output.txt > "$folder/results/predictions"/prediciton_$method"_ngramOrder"$i.txt
 		### Launch the script to perform the evaluation
-		perl ../data/scripts/conlleval.pl -d "\t" < "$folder/results/"results_$method"_ngramOrder"$i.txt > "$folder/results/evaluations"/evaluation_$method"_ngramOrder"$i.txt
+		perl ../data/scripts/conlleval.pl -d "\t" < "$folder/results/predictions"/prediciton_$method"_ngramOrder"$i.txt > "$folder/results/evaluations"/evaluation_$method"_ngramOrder"$i.txt
+		#echo "Status: 100%"
 		echo "Ngram_order: $i done"
 		((counter = 0))
 	done 
 	echo "Method: $method done"
 done < $method_list
-echo "Everything has been processed. Evalutations are in $folder/results/evalutations, automata are in $folder/results/automata and visual results are in $folder/results"
+echo "Everything has been processed. Evalutations are in $folder/results/evalutations and visual results are in $folder/results/predictions"
 echo "Cleaning useless files"
 rm 1.fst
 rm tmp_output.txt
