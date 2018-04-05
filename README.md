@@ -24,7 +24,7 @@ using the training set,
 
 Do not move or modify any file. 
 
-To run the code:
+To run the code:  
 	* Navigate to the /src folder  
 	* Choose which approach to run  
 		* Word to IOB  
