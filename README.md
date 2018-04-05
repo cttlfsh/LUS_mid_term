@@ -20,15 +20,4 @@ using the training set,
   
   * TODO: Lemma_IOB, POSTAG_IOB
   
-### HOW TO USE
 
-Do not move or modify any file. 
-
-To run the code:  
-	* Navigate to the /src folder  
-	* Choose which approach to run  
-		* Word to IOB  
-		*  
-	* run the respective bash script as:  
-		*name_of_the script*.sh *threshold*  
-	* The script will take care of everything, from the creation of the lexicon to the evaluation of the results  
