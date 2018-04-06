@@ -26,20 +26,18 @@ method_list="methods_list.txt"
 
 if [[ "$threshold" = "0" ]]; then
 	#statements
-	folder="w2IOB_no_cutoff"
+	folder="Lemma2IOB_without_O_no_cutoff"
 else
-	folder="w2IOB_cutoff"
+	folder="Lemma2IOB_without_O_cutoff"
 fi
 ### Creates folders to store important files
 mkdir $folder
-#mkdir "$folder"/results
-#mkdir "$folder/results"/evaluations
-#mkdir "$folder/results"/automata
+
 mkdir "$folder"/files
 #mkdir "$folder"/methods
 ### Call the python script which outputs necessary
 ### .txt files
-python scripts/W2IOB_processor.py $train_file $test_file $threshold 
+python scripts/Lemma2IOB_processor.py $threshold 
 
 lexicon=$folder"/files/lexicon.txt"
 automaton=$folder"/files/automaton.txt"
@@ -59,8 +57,6 @@ ngrammake --method=witten_bell $folder/train_IOBs.cnt > $folder/language_model.l
 while read -r line
 do
 	echo $line | farcompilestrings --symbols=$lexicon --unknown_symbol='<unk>' --generate_keys=1 --keep_symbols | farextract --filename_suffix='.fst' 		
-	### TODO: big todo, the following line is not working, it outputs an empty file instead of creating the automa
-	### more detailed analysis: the command which seems not to work properly is 'fstcompose - $folder/$method/ngramOrder$i/language_model.lm'
 	fstcompose 1.fst $folder/word2IOB.fst | fstcompose - $folder/language_model.lm | fstrmepsilon | fstshortestpath | fsttopsort | fstprint --isymbols=$lexicon --osymbols=$lexicon >> $folder/automa.txt
 	#echo " " >> $folder/automa.txt
 	((counter++))
@@ -68,6 +64,9 @@ do
 done < $test_sentence
 ### 
 awk '{print $4}' < $folder/automa.txt | awk -v RS= -v ORS="\n\n" "1" > tmp_output.txt
+
+#python scripts/cleaner.py tmp_output.txt
+
 paste $test_file tmp_output.txt > "$folder"/results.txt
 ### Launch the script to perform the evaluation
 perl ../data/scripts/conlleval.pl -d "\t" < "$folder/"results.txt > "$folder"/evaluation.txt

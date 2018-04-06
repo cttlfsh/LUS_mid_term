@@ -60,8 +60,7 @@ words_sentence = []
 ### Test_file
 #test_file = sys.argv[2] # "../data/data/NLSPARQL.test.data"
 ### Threshold for the cut-off
-threshold = 50#sys.argv[1]
-
+threshold = int(sys.argv[1])
 
 with open("../data/data/NLSPARQL.train.data", "r") as f:
 	IOB_snt = ""
@@ -90,8 +89,8 @@ with open("../data/data/NLSPARQL.train.data", "r") as f:
 '''
 freq_words = frequency_unigram(words)
 freq_IOB = frequency_unigram(IOB)
-sorted_IOBs = freq_IOB.most_common()
-sorted_words = freq_words.most_common()
+#sorted_IOBs = freq_IOB.most_common()
+#sorted_words = freq_words.most_common()
 #print(sorted_IOBs)
 
 # ### Save in a file this list to have distributions for the report ###

@@ -6,9 +6,9 @@
 #	with the following parameters:   															#
 #																								#
 #																								#
-#	@param train_file the training file 														#
-#	@param test_file the testing file 															#
-#	@param threshold the cut-off threshold to apply 											#
+#	@param $TRAIN_FILE the training file 														#
+#	@param $TEST_FILE the testing file 															#
+#	@param $threshold the cut-off threshold to apply 											#
 #																								#	
 #																								#
 #	The script will generate all necessary files/directories and perform both training and 		#
@@ -19,10 +19,10 @@
 
 #!/bin/bash
 
-train_file="../data/data/NLSPARQL.train.data" #$1
-test_file="../data/data/NLSPARQL.test.data" #$2
+TRAIN_FILE="../data/data/NLSPARQL.train.data" #$1
+TEST_FILE="../data/data/NLSPARQL.test.data" #$2
+METHOD_LIST="methods_list.txt"
 threshold=$1
-method_list="methods_list.txt"
 
 if [[ "$threshold" = "0" ]]; then
 	#statements
@@ -39,24 +39,24 @@ mkdir "$folder"/files
 mkdir "$folder"/methods
 ### Call the python script which outputs necessary
 ### .txt files
-python scripts/W2IOB_processor.py $train_file $test_file $threshold 
+python scripts/W2IOB_processor.py $TRAIN_FILE $TEST_FILE $threshold 
 
-lexicon=$folder"/files/lexicon.txt"
-automaton=$folder"/files/automaton.txt"
-train_IOB=$folder"/files/train_IOB_by_sentence.txt"
-test_sentence=$folder"/files/test_words_by_sentence.txt"
-max_ngram_order=5
+LEXICON=$folder"/files/lexicon.txt"
+AUTOMATON=$folder"/files/automaton.txt"
+TRAIN_IOB=$folder"/files/train_IOB_by_sentence.txt"
+TEST_SENTENCE=$folder"/files/test_words_by_sentence.txt"
+MAX_NGRAM_ORDER=5
 
 counter=0
 
 ### Generates the transducer
-fstcompile --isymbols=$lexicon --osymbols=$lexicon $automaton > $folder/word2IOB.fst
-farcompilestrings --symbols=$lexicon --unknown_symbol='<unk>' $train_IOB > $folder/train_IOBs.far
+fstcompile --isymbols=$LEXICON --osymbols=$LEXICON $AUTOMATON > $folder/word2IOB.fst
+farcompilestrings --symbols=$LEXICON --unknown_symbol='<unk>' $TRAIN_IOB > $folder/train_IOBs.far
 ### Perform the testing for each possible smoothing method and for each ngram order
 while read -r method
 do
 	mkdir "$folder/methods"/$method
-	for i in $(seq 1 $max_ngram_order)
+	for i in $(seq 1 $MAX_NGRAM_ORDER)
 	do
 		echo "Method: $method - Ngram_order: $i"
 		echo "Processing..."
@@ -66,10 +66,10 @@ do
 		### Iterate on all test sentences
 		while read -r line
 		do
-			echo $line | farcompilestrings --symbols=$lexicon --unknown_symbol='<unk>' --generate_keys=1 --keep_symbols | farextract --filename_suffix='.fst' 		
+			echo $line | farcompilestrings --symbols=$LEXICON --unknown_symbol='<unk>' --generate_keys=1 --keep_symbols | farextract --filename_suffix='.fst' 		
 			### TODO: big todo, the following line is not working, it outputs an empty file instead of creating the automa
 			### more detailed analysis: the command which seems not to work properly is 'fstcompose - $folder/$method/ngramOrder$i/language_model.lm'
-			fstcompose 1.fst $folder/word2IOB.fst | fstcompose - $folder/methods/$method/ngramOrder$i/language_model.lm | fstrmepsilon | fstshortestpath | fsttopsort | fstprint --isymbols=$lexicon --osymbols=$lexicon >> $folder/methods/$method/ngramOrder$i/automa.txt
+			fstcompose 1.fst $folder/word2IOB.fst | fstcompose - $folder/methods/$method/ngramOrder$i/language_model.lm | fstrmepsilon | fstshortestpath | fsttopsort | fstprint --isymbols=$LEXICON --osymbols=$LEXICON >> $folder/methods/$method/ngramOrder$i/automa.txt
 			# if [[ counter == 271 ]]; then
 			# 	echo "Status: 25%"
 			# else if [[ counter == 542 ]]; then
@@ -79,10 +79,10 @@ do
 			# fi
 			 ((counter++))
 			echo "Processed the $counter line: $line"
-		done < $test_sentence
+		done < $TEST_SENTENCE
 
 		awk '{print $4}' < $folder/methods/$method/ngramOrder$i/automa.txt | awk -v RS= -v ORS="\n\n" "1" > tmp_output.txt
-		paste $test_file tmp_output.txt > "$folder/results/predictions"/prediciton_$method"_ngramOrder"$i.txt
+		paste $TEST_FILE tmp_output.txt > "$folder/results/predictions"/prediciton_$method"_ngramOrder"$i.txt
 		### Launch the script to perform the evaluation
 		perl ../data/scripts/conlleval.pl -d "\t" < "$folder/results/predictions"/prediciton_$method"_ngramOrder"$i.txt > "$folder/results/evaluations"/evaluation_$method"_ngramOrder"$i.txt
 		#echo "Status: 100%"
@@ -90,7 +90,7 @@ do
 		((counter = 0))
 	done 
 	echo "Method: $method done"
-done < $method_list
+done < $METHOD_LIST
 echo "Everything has been processed. Evalutations are in $folder/results/evalutations and visual results are in $folder/results/predictions"
 echo "Cleaning useless files"
 rm 1.fst
