@@ -18,10 +18,5 @@ using the training set,
     * Train the WFST and the LM (generated using opengram),taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
     * Evaluate the trained model on the provided test set.
   
-<<<<<<< Updated upstream
-  * TODO: Lemma_IOB, POSTAG_IOB
-  
 
-=======
   * TODO: Lemma_IOB, POSTAG_IOB
->>>>>>> Stashed changes
