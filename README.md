@@ -30,9 +30,9 @@ cd src
 
 * Choose which approach to run between word2IOB, w2IOB_without_O and lemma2IOB and launch the respective script
 ```
-./<method_name>.sh  -- <method_name> from word2IOB, w2IOB_without_O, lemma2IOB
+./<method_name>.sh  
 ```
-
+with <method_name> from word2IOB, w2IOB_without_O, lemma2IOB
 * The bash script will perform all necessary actions, results are stored in:
 
 ```
