@@ -40,45 +40,45 @@ cd src
 ```
 
 ## Deployment 
-* word2IOB  
+1. word2IOB  
    First part of the project, used as baseline for the others. Main operations are:  
    
-    * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor.py script. Files are in:
+   * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor.py script. Files are in:
 
 ```
 /src/<method_name>/files    
 ```  
   
-    * Compute the likelihood, also performed by the python script
+   * Compute the likelihood, also performed by the python script
 using the training set,
-    * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
-    * Evaluate the trained model on the provided test set.
+   * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
+   * Evaluate the trained model on the provided test set.
 
-* w2IOB_without_O  
+2. w2IOB_without_O  
    First part of the project, where 'O' tags are generalized in the train phase. Main operations are:  
    
-    * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor_without_O.py script. Files are in:
+   * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor_without_O.py script. Files are in:
 ```
 /src/<method_name>/files
 ```
  
-    * Compute the likelihood, also performed by the python script
+   * Compute the likelihood, also performed by the python script
 using the training set,
-    * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
-    * Evaluate the trained model on the provided test set.
+   * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
+   * Evaluate the trained model on the provided test set.
 
-* lemma2IOB  
+3. lemma2IOB  
    Last try of the project, useds lemmas instead of words. Main operations are:  
    
-    * Creation of necessary files, like lexicon, automaton performed by the Lemma2IOB_processor.py script. Files are in:
+   * Creation of necessary files, like lexicon, automaton performed by the Lemma2IOB_processor.py script. Files are in:
 ```
 /src/<method_name>/files
 ```
   
-    * Compute the likelihood, also performed by the python script
+   * Compute the likelihood, also performed by the python script
 using the training set,
-    * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
-    * Evaluate the trained model on the provided test set.
+   * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
+   * Evaluate the trained model on the provided test set.
 
 ## Authors
 
