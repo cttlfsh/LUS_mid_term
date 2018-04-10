@@ -44,7 +44,6 @@ cd src
    First part of the project, used as baseline for the others. Main operations are:  
    
    * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor.py script. Files are in:
-
 ```
 /src/<method_name>/files    
 ```  
@@ -71,9 +70,9 @@ using the training set,
    Last try of the project, useds lemmas instead of words. Main operations are:  
    
    * Creation of necessary files, like lexicon, automaton performed by the Lemma2IOB_processor.py script. Files are in:
-```
-/src/<method_name>/files
-```
+   ```
+	/src/<method_name>/files
+   ```
   
    * Compute the likelihood, also performed by the python script
 using the training set,
