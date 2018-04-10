@@ -9,7 +9,7 @@ This is the mid-term project of the Language Understanding System course, the ai
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -30,7 +30,13 @@ cd src
 
 * Choose which approach to run between word2IOB, w2IOB_without_O and lemma2IOB and launch the respective script
 ```
-./"method_name".sh  -- "method_name" from word2IOB, w2IOB_without_O, lemma2IOB
+./<method_name>.sh  -- <method_name> from word2IOB, w2IOB_without_O, lemma2IOB
+```
+
+* The bash script will perform all necessary actions, results are stored in:
+
+```
+/src/<method_name>/results/evaluations
 ```
 
 ## Deployment
@@ -39,8 +45,11 @@ cd src
   * word2IOB  
    First part of the project, used as baseline for the others. Main operations are:  
    
-    * Create the lexicon,
-    * Compute the likelihoods with one of the implementation proposed 
+    * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor.py script. Files are in:
+```
+/src/<method_name>/files
+```
+    * Compute the likelihood, also performed by the python script
 using the training set,
     * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
     * Evaluate the trained model on the provided test set.
@@ -48,8 +57,11 @@ using the training set,
   * w2IOB_without_O  
    First part of the project, where 'O' tags are generalized in the train phase. Main operations are:  
    
-    * Create the lexicon,
-    * Compute the likelihoods with one of the implementation proposed 
+    * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor_without_O.py script. Files are in:
+```
+/src/<method_name>/files
+```
+    * Compute the likelihood, also performed by the python script
 using the training set,
     * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
     * Evaluate the trained model on the provided test set.
@@ -57,11 +69,14 @@ using the training set,
   * lemma2IOB  
    Last try of the project, useds lemmas instead of words. Main operations are:  
    
-    * Create the lexicon,
-    * Compute the likelihoods with one of the implementation proposed 
+    * Creation of necessary files, like lexicon, automaton performed by the Lemma2IOB_processor.py script. Files are in:
+```
+/src/<method_name>/files
+```
+    * Compute the likelihood, also performed by the python script
 using the training set,
     * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
-    * Evaluate the trained model on the provided test set. 
+    * Evaluate the trained model on the provided test set.
 
 ## Authors
 
