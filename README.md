@@ -15,20 +15,20 @@ These instructions will get you a copy of the project up and running on your loc
 
 To succesfully run the project you need to download two external tool:  
    
-    * OpenFST library, see [OpenFST] (http://www.openfst.org/twiki/bin/view/FST/WebHome)
-    * OpenGrm Ngrm library [OpenNgrm] (http://www.opengrm.org)
+* OpenFST library, see [OpenFST](http://www.openfst.org/twiki/bin/view/FST/WebHome)
+* OpenGrm Ngrm library [OpenNgrm](http://www.opengrm.org)
 
 
 ### Make the project run
 
 Different approaches have been implemented, to run them:  
 
-	* Move to the /src folder from terminal 
+* Move to the /src folder from terminal 
 ```
 cd src
 ```
 
-	* Choose which approach to run between word2IOB, w2IOB_without_O and lemma2IOB and launch the respective script
+* Choose which approach to run between word2IOB, w2IOB_without_O and lemma2IOB and launch the respective script
 ```
 ./"method_name".sh  -- "method_name" from word2IOB, w2IOB_without_O, lemma2IOB
 ```
@@ -61,11 +61,7 @@ using the training set,
     * Compute the likelihoods with one of the implementation proposed 
 using the training set,
     * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
-    * Evaluate the trained model on the provided test set.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+    * Evaluate the trained model on the provided test set. 
 
 ## Authors
 
