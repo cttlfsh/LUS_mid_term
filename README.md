@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 To succesfully run the project you need to download two external tool:  
    
 * OpenFST library, see [OpenFST](http://www.openfst.org/twiki/bin/view/FST/WebHome)
-* OpenGrm Ngrm library [OpenNgrm](http://www.opengrm.org)
+* OpenGrm Ngrm library, see [OpenNgrm](http://www.opengrm.org)
 
 
 ### Make the project run
