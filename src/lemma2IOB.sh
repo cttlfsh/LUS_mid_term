@@ -26,9 +26,9 @@ threshold=$1
 
 if [[ "$threshold" = "0" ]]; then
 	#statements
-	folder="Lemma2IOB_no_cutoff"
+	folder="lemma2IOB"
 else
-	folder="Lemma2IOB_cutoff"
+	folder="lemma2IOB_cutoff"
 fi
 ### Creates folders to store important files
 mkdir $folder
@@ -67,8 +67,6 @@ do
 		while read -r line
 		do
 			echo $line | farcompilestrings --symbols=$LEXICON --unknown_symbol='<unk>' --generate_keys=1 --keep_symbols | farextract --filename_suffix='.fst' 		
-			### TODO: big todo, the following line is not working, it outputs an empty file instead of creating the automa
-			### more detailed analysis: the command which seems not to work properly is 'fstcompose - $folder/$method/ngramOrder$i/language_model.lm'
 			fstcompose 1.fst $folder/word2IOB.fst | fstcompose - $folder/methods/$method/ngramOrder$i/language_model.lm | fstrmepsilon | fstshortestpath | fsttopsort | fstprint --isymbols=$LEXICON --osymbols=$LEXICON >> $folder/methods/$method/ngramOrder$i/automa.txt
 			# if [[ counter == 271 ]]; then
 			# 	echo "Status: 25%"
@@ -83,9 +81,7 @@ do
 
 		awk '{print $4}' < $folder/methods/$method/ngramOrder$i/automa.txt | awk -v RS= -v ORS="\n\n" "1" > tmp_output.txt
 
-		python scripts/cleaner.py tmp_output.txt
-
-		paste $TEST_FILE new_tmp_output.txt > "$folder/results/predictions"/prediciton_$method"_ngramOrder"$i.txt
+		paste $TEST_FILE tmp_output.txt > "$folder/results/predictions"/prediciton_$method"_ngramOrder"$i.txt
 		### Launch the script to perform the evaluation
 		perl ../data/scripts/conlleval.pl -d "\t" < "$folder/results/predictions"/prediciton_$method"_ngramOrder"$i.txt > "$folder/results/evaluations"/evaluation_$method"_ngramOrder"$i.txt
 		#echo "Status: 100%"
@@ -98,5 +94,4 @@ echo "Everything has been processed. Evalutations are in $folder/results/evaluta
 echo "Cleaning useless files"
 rm 1.fst
 rm tmp_output.txt
-rm new_tmp_output.txt
 echo 'Done! Program finished successfully!'

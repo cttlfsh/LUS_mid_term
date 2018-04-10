@@ -194,17 +194,17 @@ for element in IOB_list_final:
 
 if (threshold == 0):
 	### Generate all necessary files
-	with open("w2IOB_without_O_no_cutoff/files/test_words_by_sentence.txt", "w") as f:
+	with open("w2IOB_without_O/files/test_words_by_sentence.txt", "w") as f:
 		for line in words_sentence:
 			f.write(str(line) + "\n")
-	with open("w2IOB_without_O_no_cutoff/files/train_IOB_by_sentence.txt", "w") as f:
+	with open("w2IOB_without_O/files/train_IOB_by_sentence.txt", "w") as f:
 		for line in IOB_sentence:
 			f.write(str(line) + "\n")
-	with open("w2IOB_without_O_no_cutoff/files/lexicon.txt", "w") as f:
+	with open("w2IOB_without_O/files/lexicon.txt", "w") as f:
 		f.write("<eps>"+"\t"+"0"+"\n")
 		for key, value in enumerate(lexicon):
 			f.write(str(value+"\t"+str(key+1)+"\n"))
-	with open("w2IOB_without_O_no_cutoff/files/automaton.txt", "w") as f:
+	with open("w2IOB_without_O/files/automaton.txt", "w") as f:
 		for element in automaton:
 			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")
 		f.write("0")

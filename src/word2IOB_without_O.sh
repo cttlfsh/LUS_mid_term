@@ -26,7 +26,7 @@ threshold=$1
 
 if [[ "$threshold" = "0" ]]; then
 	#statements
-	folder="w2IOB_without_O_no_cutoff"
+	folder="w2IOB_without_O"
 else
 	folder="w2IOB_without_O_cutoff"
 fi
@@ -67,8 +67,6 @@ do
 		while read -r line
 		do
 			echo $line | farcompilestrings --symbols=$LEXICON --unknown_symbol='<unk>' --generate_keys=1 --keep_symbols | farextract --filename_suffix='.fst' 		
-			### TODO: big todo, the following line is not working, it outputs an empty file instead of creating the automa
-			### more detailed analysis: the command which seems not to work properly is 'fstcompose - $folder/$method/ngramOrder$i/language_model.lm'
 			fstcompose 1.fst $folder/word2IOB.fst | fstcompose - $folder/methods/$method/ngramOrder$i/language_model.lm | fstrmepsilon | fstshortestpath | fsttopsort | fstprint --isymbols=$LEXICON --osymbols=$LEXICON >> $folder/methods/$method/ngramOrder$i/automa.txt
 			# if [[ counter == 271 ]]; then
 			# 	echo "Status: 25%"

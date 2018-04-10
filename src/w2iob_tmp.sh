@@ -26,9 +26,9 @@ method_list="methods_list.txt"
 
 if [[ "$threshold" = "0" ]]; then
 	#statements
-	folder="Lemma2IOB_without_O_no_cutoff"
+	folder="pos2IOB"
 else
-	folder="Lemma2IOB_without_O_cutoff"
+	folder="pos2IOB_cutoff"
 fi
 ### Creates folders to store important files
 mkdir $folder
@@ -37,7 +37,7 @@ mkdir "$folder"/files
 #mkdir "$folder"/methods
 ### Call the python script which outputs necessary
 ### .txt files
-python scripts/Lemma2IOB_processor.py $threshold 
+python scripts/PoS2IOB_processor.py $threshold 
 
 lexicon=$folder"/files/lexicon.txt"
 automaton=$folder"/files/automaton.txt"
@@ -54,14 +54,14 @@ farcompilestrings --symbols=$lexicon --unknown_symbol='<unk>' $train_IOB > $fold
 ngramcount --order=3 --require_symbols=false $folder/train_IOBs.far > $folder/train_IOBs.cnt
 ngrammake --method=witten_bell $folder/train_IOBs.cnt > $folder/language_model.lm
 ### Iterate on all test sentences
-while read -r line
-do
-	echo $line | farcompilestrings --symbols=$lexicon --unknown_symbol='<unk>' --generate_keys=1 --keep_symbols | farextract --filename_suffix='.fst' 		
+#while read -r line
+#do
+	echo 'star of thor' | farcompilestrings --symbols=$lexicon --unknown_symbol='<unk>' --generate_keys=1 --keep_symbols | farextract --filename_suffix='.fst' 		
 	fstcompose 1.fst $folder/word2IOB.fst | fstcompose - $folder/language_model.lm | fstrmepsilon | fstshortestpath | fsttopsort | fstprint --isymbols=$lexicon --osymbols=$lexicon >> $folder/automa.txt
 	#echo " " >> $folder/automa.txt
 	((counter++))
 	echo "Processed the $counter line: $line"
-done < $test_sentence
+#done < $test_sentence
 ### 
 awk '{print $4}' < $folder/automa.txt | awk -v RS= -v ORS="\n\n" "1" > tmp_output.txt
 

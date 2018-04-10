@@ -62,15 +62,15 @@ words_sentence = []
 ### Threshold for the cut-off
 threshold = int(sys.argv[1])
 
-with open("../data/data/NLSPARQL.train.data", "r") as f, open("additional_features/train_lemmas.txt") as f1:
+with open("../data/data/NLSPARQL.train.data", "r") as f, open("additional_material/additional_features/train_lemmas.txt") as f1:
 	IOB_snt = ""
 	for line, line1 in zip(f, f1):
 		if(line != "\n"):
 			IOB_snt = IOB_snt + str(line.split("\t")[1][:-1]) + "\t"
 			### Create a list of tuple (word, IOB)
- 			sentence.append([line1, line.split("\t")[1][:-1]])
+ 			sentence.append([line1[:-1], line.split("\t")[1][:-1]])
  			### Create a list of words
- 			words.append(line1)
+ 			words.append(line1[:-1])
  			IOB.append(line.split("\t")[1][:-1])
  		else:
  			IOB_sentence.append(IOB_snt[:-1])
@@ -90,15 +90,15 @@ with open("../data/data/NLSPARQL.train.data", "r") as f, open("additional_featur
 freq_words = frequency_unigram(words)
 freq_IOB = frequency_unigram(IOB)
 #sorted_IOBs = freq_IOB.most_common()
-#sorted_words = freq_words.most_common()
-#print(sorted_IOBs)
+sorted_words = freq_words.most_common()
+#print(sorted_words)
 
 # ### Save in a file this list to have distributions for the report ###
-# with open("IOB_distribution.txt", "w") as f:
+# with open("additional_material/train_distributions/IOB_distribution.txt", "w") as f:
 #  	for ut in sorted_IOBs:
 # 		f.write(str(ut[0])+"\t"+str(ut[1])+"\n")
 # ### Save in a file this list to have distributions for the report ###
-# with open("words_distribution.txt", "w") as f:
+# with open("additional_material/train_distributions/words_distribution.txt", "w") as f:
 # 	for ut in sorted_words:
 # 		f.write(str(ut[0])+"\t"+str(ut[1])+"\n")
 
@@ -185,17 +185,17 @@ for element in IOB_list_final:
 
 if (threshold == 0):
 	### Generate all necessary files
-	with open("Lemma2IOB_no_cutoff/files/test_words_by_sentence.txt", "w") as f:
+	with open("Lemma2IOB/files/test_words_by_sentence.txt", "w") as f:
 		for line in words_sentence:
 			f.write(str(line) + "\n")
-	with open("Lemma2IOB_no_cutoff/files/train_IOB_by_sentence.txt", "w") as f:
+	with open("Lemma2IOB/files/train_IOB_by_sentence.txt", "w") as f:
 		for line in IOB_sentence:
 			f.write(str(line) + "\n")
-	with open("Lemma2IOB_no_cutoff/files/lexicon.txt", "w") as f:
+	with open("Lemma2IOB/files/lexicon.txt", "w") as f:
 		f.write("<eps>"+"\t"+"0"+"\n")
 		for key, value in enumerate(lexicon):
 			f.write(str(value+"\t"+str(key+1)+"\n"))
-	with open("Lemma2IOB_no_cutoff/files/automaton.txt", "w") as f:
+	with open("Lemma2IOB/files/automaton.txt", "w") as f:
 		for element in automaton:
 			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")
 		f.write("0")
