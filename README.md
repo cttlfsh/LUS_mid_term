@@ -47,8 +47,9 @@ cd src
    
     * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor.py script. Files are in:
 ```
-/src/<method_name>/files
+/src/<method_name>/files  
 ```
+  
     * Compute the likelihood, also performed by the python script
 using the training set,
     * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
@@ -61,6 +62,7 @@ using the training set,
 ```
 /src/<method_name>/files
 ```
+ 
     * Compute the likelihood, also performed by the python script
 using the training set,
     * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
@@ -73,6 +75,7 @@ using the training set,
 ```
 /src/<method_name>/files
 ```
+  
     * Compute the likelihood, also performed by the python script
 using the training set,
     * Train the WFST and the LM,taking care about unknown words and with the possibility of using a frequency cut-off on the likelihood,
