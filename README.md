@@ -23,18 +23,20 @@ To succesfully run the project you need to download two external tool:
 
 Different approaches have been implemented, to run them:  
 
-* Move to the /src folder from terminal 
+* Move to the /src folder from terminal  
+
 ```
 cd src
 ```
 
-* Choose which approach to run between word2IOB, w2IOB_without_O and lemma2IOB and launch the respective script
+* Choose which approach to run between word2IOB, w2IOB_without_O and lemma2IOB and launch the respective script  
+
 ```
 ./<method_name>.sh  
 ```
 with <method_name> from word2IOB, w2IOB_without_O, lemma2IOB  
 
-* The bash script will perform all necessary actions, results are stored in:
+* The bash script will perform all necessary actions, results are stored in:  
 
 ```
 /src/<method_name>/results/evaluations
@@ -44,7 +46,8 @@ with <method_name> from word2IOB, w2IOB_without_O, lemma2IOB
 1. word2IOB  
    First part of the project, used as baseline for the others. Main operations are:  
    
-   * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor.py script. Files are in:
+   * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor.py script. Files are in:  
+
    ```
    /src/<method_name>/files    
    ```  
@@ -57,7 +60,8 @@ using the training set,
 2. w2IOB_without_O  
    First part of the project, where 'O' tags are generalized in the train phase. Main operations are:  
    
-   * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor_without_O.py script. Files are in:
+   * Creation of necessary files, like lexicon, automaton performed by the W2IOB_processor_without_O.py script. Files are in:  
+
    ```
    /src/<method_name>/files
    ```
@@ -70,7 +74,7 @@ using the training set,
 3. lemma2IOB  
    Last try of the project, useds lemmas instead of words. Main operations are:  
    
-   * Creation of necessary files, like lexicon, automaton performed by the Lemma2IOB_processor.py script. Files are in:
+   * Creation of necessary files, like lexicon, automaton performed by the Lemma2IOB_processor.py script. Files are in:  
    ```
 	/src/<method_name>/files
    ```
