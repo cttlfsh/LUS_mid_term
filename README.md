@@ -1,10 +1,5 @@
 # Development of a Spoken Language Understanding module 
 
-Student: Andrea Montagner  
-ID:189514
-
-Spring 2018
-
 This is the mid-term project of the Language Understanding System course, the aim is to develop o Spoken Language Understanding module for the Movie Domain capable of performing PoS tagging.
 
 ## Getting Started
@@ -86,5 +81,5 @@ using the training set,
 
 ## Authors
 
-* **Andrea Montagner** 
+* **Andrea Montagner** - *ID:189514*
 
