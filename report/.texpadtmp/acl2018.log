@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  5 APR 2018 11:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  10 APR 2018 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -173,106 +173,162 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-) (/Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.aux)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+)
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count104
+\float@exts=\toks15
+\float@box=\box28
+\@float@everytoks=\toks16
+\@floatcapt=\box29
+) (/Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.aux
+
+LaTeX Warning: Label `firsttab' multiply defined.
+
+
+LaTeX Warning: Label `fig:f1res' multiply defined.
+
+)
 \openout1 = `acl2018.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 40.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring ON on input line 39.
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring ON on input line 40.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count104
+\c@section@level=\count105
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
  (/Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.out) (/Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.out)
 \@outlinefile=\write3
 \openout3 = `acl2018.out'.
 
  (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen110
-\scratchbox=\box29
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen111
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks16
-) ABD: EveryShipout initializing macros
+\scratchcounter=\count106
+\scratchdimen=\dimen112
+\scratchbox=\box31
+\nofMPsegments=\count107
+\nofMParguments=\count108
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen113
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
+\everyMPtoPDFconversion=\toks18
+) ABD: EveryShipout initializing macros (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 40.
+(Font)              <12> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 40.
+(Font)              <8> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 40.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 40.
+(Font)              <6> on input line 41.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 41.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 40.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 41.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 51.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
 
-Underfull \hbox (badness 4229) in paragraph at lines 59--61
+Underfull \hbox (badness 4229) in paragraph at lines 60--62
 \OT1/ptm/m/n/10.95 The pro-vided dataset is the Mi-crosoft NL-
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
 
-Underfull \hbox (badness 5077) in paragraph at lines 63--64
+Underfull \hbox (badness 5077) in paragraph at lines 64--65
 []\OT1/ptm/b/n/10.95 NL-SPARQL.train.feats.txt \OT1/ptm/m/n/10.95 con-tain-ing a
  []
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 64--65
+Underfull \hbox (badness 3769) in paragraph at lines 65--66
 []\OT1/ptm/b/n/10.95 NL-SPARQL.test.data \OT1/ptm/m/n/10.95 con-tain-ing a two
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 []\OT1/ptm/b/n/10.95 NL-SPARQL.test.feats.txt \OT1/ptm/m/n/10.95 con-tain-ing a
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 73--74
-\OT1/ptm/m/n/12 pro-vided files are con-cerned, can be per-
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 71.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 74.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 93--94
+\OT1/ptm/m/n/10.95 A deeper anal-y-sis, in-stead, shows how both
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
  []
 
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -280,180 +336,116 @@ Underfull \hbox (badness 1038) in paragraph at lines 73--74
 
 
 ]
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-\OT1/ptm/m/n/12 di-vided in \OT1/pcr/m/n/12 I.movie.domain \OT1/ptm/m/n/12 and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 139.
-[2]
-Underfull \hbox (badness 2644) in paragraph at lines 181--188
-[]\OT1/ptm/m/n/12 The ti-tle, au-thor names and ad-dresses
- []
+<img/IOB_chart_noO.png, id=19, 602.25pt x 372.39125pt>
+File: img/IOB_chart_noO.png Graphic file (type png)
+ <use img/IOB_chart_noO.png>
+Package pdftex.def Info: img/IOB_chart_noO.png used on input line 113.
+(pdftex.def)             Requested size: 210.79065pt x 130.33888pt.
+ <img/Word_chart.png, id=20, 602.25pt x 372.39125pt>
+File: img/Word_chart.png Graphic file (type png)
+ <use img/Word_chart.png>
+Package pdftex.def Info: img/Word_chart.png used on input line 122.
+(pdftex.def)             Requested size: 210.79065pt x 130.33888pt.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 209.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 209.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 212.
-
-Underfull \hbox (badness 3323) in paragraph at lines 238--243
-\OT1/ptm/m/n/12 sec-tion head-ings in the style shown on
+Underfull \hbox (badness 1325) in paragraph at lines 163--164
+\OT1/ptm/m/n/10.95 each smooth-ing method of-fered by Open-FST,
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 238--243
-\OT1/ptm/m/n/12 with the sec-tion num-ber and the sub-sec-
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+[2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.170 \begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.170 \begin{equation}
+                       <./img/IOB_chart_noO.png (PNG copy)> <./img/Word_chart.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 238--243
-\OT1/ptm/m/n/12 tion num-ber sep-a-rated by a dot, in Ara-
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
  []
 
-
-Underfull \hbox (badness 2150) in paragraph at lines 261--273
-\OT1/ptm/m/n/12 vided L[]T[]X style, the for-mer is ac-com-
- []
-
-
-Underfull \hbox (badness 1460) in paragraph at lines 261--273
-\OT1/ptm/m/n/12 plished us-ing []\OT1/pcr/m/n/12 \cite \OT1/ptm/m/n/12 and the lat-ter with
- []
+<img/chart.png, id=35, 1313.90875pt x 751.80875pt>
+File: img/chart.png Graphic file (type png)
+ <use img/chart.png>
+Package pdftex.def Info: img/chart.png used on input line 223.
+(pdftex.def)             Requested size: 455.24408pt x 260.48705pt.
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 261--273
-[]\OT1/pcr/m/n/12 \shortcite \OT1/ptm/m/n/12 or []\OT1/pcr/m/n/12 \newcite\OT1/ptm/m/n/12 . Col-lapse
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 261--273
-\OT1/ptm/m/n/12 mul-ti-ple ci-ta-tions as in ([][]Gus-field[][], [][]1997[][];
- []
-
-
-Underfull \hbox (badness 2057) in paragraph at lines 261--273
-[][]\OT1/ptm/m/n/12 Aho and Ull-man[][], [][]1972[][]); this is ac-com-
- []
-
-
-Underfull \hbox (badness 4303) in paragraph at lines 261--273
-\OT1/ptm/m/n/12 mas within the []\OT1/pcr/m/n/12 \cite \OT1/ptm/m/n/12 com-mand, \OT1/ptm/m/it/12 e.g.\OT1/ptm/m/n/12 ,
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 261--273
-[]\OT1/pcr/m/n/12 \cite{Gusfield:97,Aho:72}\OT1/ptm/m/n/12 . Ap-
- []
-
-
-Underfull \hbox (badness 1189) in paragraph at lines 294--300
-[]\OT1/ptm/m/n/12 If the BibT[]X file con-tains DOI fields,
- []
-
-
-Underfull \hbox (badness 3058) in paragraph at lines 294--300
-\OT1/ptm/m/n/12 the pa-per ti-tle in the ref-er-ences sec-tion
- []
-
-
-Underfull \hbox (badness 2707) in paragraph at lines 294--300
-\OT1/ptm/m/n/12 will ap-pear as a hy-per-link to the DOI,
- []
-
-
-Underfull \hbox (badness 3343) in paragraph at lines 294--300
-\OT1/ptm/m/n/12 us-ing the hy-per-ref L[]T[]X pack-age. To
- []
-
-
-Underfull \hbox (badness 6094) in paragraph at lines 294--300
-\OT1/ptm/m/n/12 dis-able the hy-per-ref pack-age, load the
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 294--300
-\OT1/ptm/m/n/12 style file with the []\OT1/pcr/m/n/12 nohyperref \OT1/ptm/m/n/12 op-tion:
- []
-
-
-Overfull \hbox (14.31378pt too wide) in paragraph at lines 294--300
-[]\OT1/pcr/m/n/12 \usepackage[nohyperref]{acl2018}\OT1/ptm/m/n/12 . 
- []
-
-
-Underfull \hbox (badness 2698) in paragraph at lines 303--304
-[]\OT1/ptm/m/n/12 ``[]\OT1/pcr/m/n/12 \pdfendlink \OT1/ptm/m/it/12 ended up in dif-fer-ent
+Underfull \hbox (badness 3333) in paragraph at lines 229--230
+\OT1/ptm/m/n/10.95 Evaluations in per-formed by a Pearl script,
  []
 
 [3]
-Underfull \hbox (badness 1142) in paragraph at lines 305--307
-\OT1/ptm/m/n/12 tence con-tain-ing the ci-ta-tion. (See, \OT1/ptm/m/it/12 e.g.\OT1/ptm/m/n/12 ,
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 234.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 234.
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
+
  []
 
-[4]
-Underfull \hbox (badness 1231) in paragraph at lines 431--436
-\OT1/ptm/m/n/12 In-line translit-er-a-tion or trans-la-tion can be
- []
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.263 \begin{itemize}
+                      <./img/chart.png (PNG copy)>] (/Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.bbl
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 7.
 
-Underfull \hbox (badness 1406) in paragraph at lines 470--471
-\OT1/ptm/m/n/12 The ac-knowl-edg-ments should go im-me-di-
- []
-
-(/Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.bbl [5]
-Underfull \hbox (badness 1087) in paragraph at lines 39--45
-\OT1/ptm/m/n/12 in the ba-bel pro-gram[][].  In \OT1/ptm/m/it/12 Pro-ceed-ings
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+[] \OT1/ptm/m/n/10 Open-FST.  [][]$\OT1/pcr/m/n/10 http : / / www . openfst . org /
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 489--497
-[]\OT1/ptm/m/n/12 Nonetheless, sup-ple-men-tary ma-te-rial
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 489--497
-\OT1/ptm/m/n/12 sam-ple in-puts and out-puts for a sys-tem,
- []
-
-
-Underfull \hbox (badness 5592) in paragraph at lines 489--497
-\OT1/ptm/m/n/12 pseudo-code or source code, and data.
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
  (/Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 512.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 296.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 296.
 Package rerunfilecheck Info: File `acl2018.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 512.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 296.
  )
 (\end occurred when \iffalse on line 349 was incomplete) 
 Here is how much of TeX's memory you used:
- 5866 strings out of 493014
- 85159 string characters out of 6133350
- 179060 words of memory out of 5000000
- 9321 multiletter control sequences out of 15000+600000
- 30964 words of font info for 67 fonts, out of 8000000 for 9000
+ 6176 strings out of 493014
+ 90108 string characters out of 6133350
+ 185179 words of memory out of 5000000
+ 9611 multiletter control sequences out of 15000+600000
+ 26649 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,18n,37p,552b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.pdf (6 pages, 120019 bytes).
+ 36i,14n,37p,778b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/acl2018.pdf (5 pages, 346984 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
