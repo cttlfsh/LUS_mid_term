@@ -32,7 +32,8 @@ cd src
 ```
 ./<method_name>.sh  
 ```
-with <method_name> from word2IOB, w2IOB_without_O, lemma2IOB
+with <method_name> from word2IOB, w2IOB_without_O, lemma2IOB  
+
 * The bash script will perform all necessary actions, results are stored in:
 
 ```
