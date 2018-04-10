@@ -140,7 +140,7 @@ with open("../data/data/NLSPARQL.test.data","r") as f:
 
 '''
 freq_couple = frequency_bigram(sentence)
-
+print(freq_couple)
 '''
  Compute the probability for each couple (word, IOB).
  @param: prob_couple is a list, where each object is in the form:
@@ -183,38 +183,38 @@ for element in word_list_final:
 for element in IOB_list_final:
 	lexicon.append(element)
 
-if (threshold == 0):
-	### Generate all necessary files
-	with open("w2IOB/files/test_words_by_sentence.txt", "w") as f:
-		for line in words_sentence:
-			f.write(str(line) + "\n")
-	with open("w2IOB/files/train_IOB_by_sentence.txt", "w") as f:
-		for line in IOB_sentence:
-			f.write(str(line) + "\n")
-	with open("w2IOB/files/lexicon.txt", "w") as f:
-		f.write("<eps>"+"\t"+"0"+"\n")
-		for key, value in enumerate(lexicon):
-			f.write(str(value+"\t"+str(key+1)+"\n"))
-	with open("w2IOB/files/automaton.txt", "w") as f:
-		for element in automaton:
-			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")
-		f.write("0")
-else:
-	### Generate all necessary files
-	with open("w2IOB_cutoff/files/test_words_by_sentence.txt", "w") as f:
-		for line in words_sentence:
-			f.write(str(line) + "\n")
-	with open("w2IOB_cutoff/files/train_IOB_by_sentence.txt", "w") as f:
-		for line in IOB_sentence:
-			f.write(str(line) + "\n")
-	with open("w2IOB_cutoff/files/lexicon.txt", "w") as f:
-		f.write("<eps>"+"\t"+"0"+"\n")
-		for key, value in enumerate(lexicon):
-			f.write(str(value+"\t"+str(key+1)+"\n"))
-	with open("w2IOB_cutoff/files/automaton.txt", "w") as f:
-		for element in automaton:
-			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")	
-		f.write("0")
+# if (threshold == 0):
+# 	### Generate all necessary files
+# 	with open("w2IOB/files/test_words_by_sentence.txt", "w") as f:
+# 		for line in words_sentence:
+# 			f.write(str(line) + "\n")
+# 	with open("w2IOB/files/train_IOB_by_sentence.txt", "w") as f:
+# 		for line in IOB_sentence:
+# 			f.write(str(line) + "\n")
+# 	with open("w2IOB/files/lexicon.txt", "w") as f:
+# 		f.write("<eps>"+"\t"+"0"+"\n")
+# 		for key, value in enumerate(lexicon):
+# 			f.write(str(value+"\t"+str(key+1)+"\n"))
+# 	with open("w2IOB/files/automaton.txt", "w") as f:
+# 		for element in automaton:
+# 			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")
+# 		f.write("0")
+# else:
+# 	### Generate all necessary files
+# 	with open("w2IOB_cutoff/files/test_words_by_sentence.txt", "w") as f:
+# 		for line in words_sentence:
+# 			f.write(str(line) + "\n")
+# 	with open("w2IOB_cutoff/files/train_IOB_by_sentence.txt", "w") as f:
+# 		for line in IOB_sentence:
+# 			f.write(str(line) + "\n")
+# 	with open("w2IOB_cutoff/files/lexicon.txt", "w") as f:
+# 		f.write("<eps>"+"\t"+"0"+"\n")
+# 		for key, value in enumerate(lexicon):
+# 			f.write(str(value+"\t"+str(key+1)+"\n"))
+# 	with open("w2IOB_cutoff/files/automaton.txt", "w") as f:
+# 		for element in automaton:
+# 			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")	
+# 		f.write("0")
 
 
 

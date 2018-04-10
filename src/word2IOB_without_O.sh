@@ -2,12 +2,11 @@
 #																								#
 #										INSTRUCTIONS 											#
 #																								#
-#	this script is the main script of the baseline project, to launch it, use ./word2IOB.sh 	#
-#	with the following parameters:   															#
+#	this script is the main script of the advance try of the project. It launches the right 	#
+#	python script, train and test the transducer and evaluate the output: 						#
+#	 																							#
 #																								#
 #																								#
-#	@param $TRAIN_FILE the training file 														#
-#	@param $TEST_FILE the testing file 															#
 #	@param $threshold the cut-off threshold to apply 											#
 #																								#	
 #																								#
@@ -68,11 +67,11 @@ do
 		do
 			echo $line | farcompilestrings --symbols=$LEXICON --unknown_symbol='<unk>' --generate_keys=1 --keep_symbols | farextract --filename_suffix='.fst' 		
 			fstcompose 1.fst $folder/word2IOB.fst | fstcompose - $folder/methods/$method/ngramOrder$i/language_model.lm | fstrmepsilon | fstshortestpath | fsttopsort | fstprint --isymbols=$LEXICON --osymbols=$LEXICON >> $folder/methods/$method/ngramOrder$i/automa.txt
-			# if [[ counter == 271 ]]; then
+			# if [[ "$counter" == "271" ]]; then
 			# 	echo "Status: 25%"
-			# else if [[ counter == 542 ]]; then
+			# else if [[ "$counter" == "542" ]]; then
 			# 	echo "Status: 50%"
-			# else if [[ counter == 813 ]]; then
+			# else if [[ "$counter" == "813" ]]; then
 			# 	echo "Status: 75%"
 			# fi
 			 ((counter++))

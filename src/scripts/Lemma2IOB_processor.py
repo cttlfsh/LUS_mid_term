@@ -7,8 +7,8 @@ Python script which computes sequence labeling using words
 and labels.
 It start from computing the unigram probabilities and frequencies up 
 unitl the bigram probabilities and frequencies, creating at the end
-the automaton as 'automaton.txt' and the files that will be used to 
-generate the lexicon
+useful files like the automaton as 'automaton.txt' and the lexicon
+as 'lexicon.txt'.
 
 '''
 
