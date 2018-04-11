@@ -1,0 +1,14 @@
+\begin{thebibliography}{2}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{fst()}]{fst}
+
+\newblock {OpenFST}.
+\newblock \url{http://www.openfst.org/twiki/bin/view/FST/WebHome}.
+
+\bibitem[{ngr()}]{ngr}
+
+\newblock {OpenGrm - Ngrm}.
+\newblock \url{http://www.opengrm.org}.
+
+\end{thebibliography}

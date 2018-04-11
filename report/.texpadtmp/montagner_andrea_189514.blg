@@ -1,0 +1,91 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/Monti/Desktop/LUS/LUS_mid_term/report/.texpadtmp/montagner_andrea_189514.aux
+The style file: ../acl_natbib.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ../acl2018.bib
+You're missing a field name---line 2 of file ../acl2018.bib
+ : 
+ : %    author  = {Alfred V. Aho and Jeffrey D. Ullman},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 11 of file ../acl2018.bib
+ : 
+ : %    author  = {{American Psychological Association}},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 19 of file ../acl2018.bib
+ : 
+ : % year = "1983",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 28 of file ../acl2018.bib
+ : 
+ : % author = {Ashok K. Chandra and Dexter C. Kozen and Larry J. Stockmeyer},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 39 of file ../acl2018.bib
+ : 
+ : %    author  = {Dan Gusfield},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 47 of file ../acl2018.bib
+ : 
+ : %  author = {Goodman, James
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 61 of file ../acl2018.bib
+ : 
+ : %  author = "Harper, Mary",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--to sort, need author or key in fst
+Warning--to sort, need author or key in ngr
+Warning--empty year in fst
+Warning--empty year in ngr
+You've used 2 entries,
+            3573 wiz_defined-function locations,
+            699 strings with 5741 characters,
+and the built_in function-call counts, 699 in all, are:
+= -- 64
+> -- 2
+< -- 0
++ -- 2
+- -- 0
+* -- 36
+:= -- 116
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 10
+chr.to.int$ -- 2
+cite$ -- 10
+duplicate$ -- 44
+empty$ -- 67
+format.name$ -- 0
+if$ -- 155
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 6
+newline$ -- 14
+num.names$ -- 0
+pop$ -- 28
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 43
+stack$ -- 0
+substring$ -- 26
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 18
+warning$ -- 4
+while$ -- 0
+width$ -- 0
+write$ -- 23
+(There were 7 error messages)
