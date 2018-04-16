@@ -13,6 +13,7 @@
 #	The script will generate all necessary files/directories and perform both training and 		#
 #	testing for all possible smoothing methods and ngram order 									#
 #																								#
+#	You may need to give permissions (chmod) to this script before executing it.				#	
 #																								#
 #################################################################################################
 

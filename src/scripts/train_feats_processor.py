@@ -1,3 +1,12 @@
+'''
+
+Additional script which perform a processing step on data with the aim
+of obtaining information about distributions of words and IOB
+
+Output data are used in the report.
+
+'''
+
 from collections import Counter
 import sys
 

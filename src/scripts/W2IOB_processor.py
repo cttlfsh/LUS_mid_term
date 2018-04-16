@@ -4,7 +4,7 @@ LUS mid_term project, Spring 2018
 Student: Andrea Montagner, id:189514
 
 Python script which computes sequence labeling using words
-and labels.
+and IOBs.
 It start from computing the unigram probabilities and frequencies up 
 unitl the bigram probabilities and frequencies, creating at the end
 useful files like the automaton as 'automaton.txt' and the lexicon

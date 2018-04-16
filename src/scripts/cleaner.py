@@ -1,3 +1,13 @@
+'''
+
+Do not touch or run this script, it is automatically called in the
+case of Word2IOB_without_O. 
+
+The goal is to "graphically" restore the O tag afterthe training.
+
+'''
+
+
 import sys
 
 input_file = sys.argv[1]

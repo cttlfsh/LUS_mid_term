@@ -13,6 +13,8 @@
 #	testing for all possible smoothing methods and ngram order 									#
 #																								#
 #																								#
+#	You may need to give permissions (chmod) to this script before executing it.				#	
+#																								#
 #################################################################################################
 
 #!/bin/bash
