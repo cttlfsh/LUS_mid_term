@@ -7470,9 +7470,9 @@ film	O	B-producer.name
 that	O	O
 grossed	O	B-director.name
 seven	B-movie.gross_revenue	I-director.name
-point	I-movie.gross_revenue	O
-two	I-movie.gross_revenue	B-director.name
-million	I-movie.gross_revenue	I-director.name
+point	I-movie.gross_revenue	I-director.name
+two	I-movie.gross_revenue	O
+million	I-movie.gross_revenue	B-director.name
 at	O	I-director.name
 the	O	O
 box	O	B-director.name

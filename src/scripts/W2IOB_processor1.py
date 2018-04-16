@@ -62,7 +62,7 @@ words_sentence = []
 ### Threshold for the cut-off
 threshold = int(sys.argv[1])
 
-with open("../data/data/NLSPARQL.train.data", "r") as f:
+with open("../../data/data/NLSPARQL.train.data", "r") as f:
 	IOB_snt = ""
 	for line in f:
 		if(line != "\n"):
@@ -119,14 +119,15 @@ for key,value in nbr_to_delete.items():
 for el in remove_sentence:
 	sentence.remove(el)
 
-with open("../data/data/NLSPARQL.test.data","r") as f:
-	words_snt = ""
-	for line in f:
-		if(line != "\n"):
-			words_snt = words_snt + str(line.split("\t")[0]) + "\t"
- 		else:
- 			words_sentence.append(words_snt[:-1])
- 			words_snt = ""
+# with open("../data/data/NLSPARQL.test.data","r") as f:
+# 	words_snt = ""
+# 	for line in f:
+# 		if(line != "\n"):
+# 			words_snt = words_snt + str(line.split("\t")[0]) + "\t"
+#  		else:
+#  			words_sentence.append(words_snt[:-1])
+#  			words_snt = ""
+
 
 '''
  Compute the frequency for each bigram
@@ -170,6 +171,7 @@ for iob in freq_IOB:
 		### Find probability of each IOB and give to the <unk> the prob of 1-p(IOB)
 		prob_IOB = float(freq_IOB[iob])/float(sum(val for key,val in freq_IOB.items()))
 		automaton.append([("<unk>", iob), str(-math.log((1-prob_IOB)*((float(1)/41))))])
+print(automaton)
 
 ### Keep track of words and IOB (AFTER the eventual cut-off) in order to create the lexicon
 for element in automaton:
@@ -183,38 +185,38 @@ for element in word_list_final:
 for element in IOB_list_final:
 	lexicon.append(element)
 
-if (threshold == 0):
-	### Generate all necessary files
-	with open("w2IOB/files/test_words_by_sentence.txt", "w") as f:
-		for line in words_sentence:
-			f.write(str(line) + "\n")
-	with open("w2IOB/files/train_IOB_by_sentence.txt", "w") as f:
-		for line in IOB_sentence:
-			f.write(str(line) + "\n")
-	with open("w2IOB/files/lexicon.txt", "w") as f:
-		f.write("<eps>"+"\t"+"0"+"\n")
-		for key, value in enumerate(lexicon):
-			f.write(str(value+"\t"+str(key+1)+"\n"))
-	with open("w2IOB/files/automaton.txt", "w") as f:
-		for element in automaton:
-			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")
-		f.write("0")
-else:
-	### Generate all necessary files
-	with open("w2IOB_cutoff/files/test_words_by_sentence.txt", "w") as f:
-		for line in words_sentence:
-			f.write(str(line) + "\n")
-	with open("w2IOB_cutoff/files/train_IOB_by_sentence.txt", "w") as f:
-		for line in IOB_sentence:
-			f.write(str(line) + "\n")
-	with open("w2IOB_cutoff/files/lexicon.txt", "w") as f:
-		f.write("<eps>"+"\t"+"0"+"\n")
-		for key, value in enumerate(lexicon):
-			f.write(str(value+"\t"+str(key+1)+"\n"))
-	with open("w2IOB_cutoff/files/automaton.txt", "w") as f:
-		for element in automaton:
-			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")	
-		f.write("0")
+# if (threshold == 0):
+# 	### Generate all necessary files
+# 	with open("w2IOB/files/test_words_by_sentence.txt", "w") as f:
+# 		for line in words_sentence:
+# 			f.write(str(line) + "\n")
+# 	with open("w2IOB/files/train_IOB_by_sentence.txt", "w") as f:
+# 		for line in IOB_sentence:
+# 			f.write(str(line) + "\n")
+# 	with open("w2IOB/files/lexicon.txt", "w") as f:
+# 		f.write("<eps>"+"\t"+"0"+"\n")
+# 		for key, value in enumerate(lexicon):
+# 			f.write(str(value+"\t"+str(key+1)+"\n"))
+# 	with open("w2IOB/files/automaton.txt", "w") as f:
+# 		for element in automaton:
+# 			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")
+# 		f.write("0")
+# else:
+# 	### Generate all necessary files
+# 	with open("w2IOB_cutoff/files/test_words_by_sentence.txt", "w") as f:
+# 		for line in words_sentence:
+# 			f.write(str(line) + "\n")
+# 	with open("w2IOB_cutoff/files/train_IOB_by_sentence.txt", "w") as f:
+# 		for line in IOB_sentence:
+# 			f.write(str(line) + "\n")
+# 	with open("w2IOB_cutoff/files/lexicon.txt", "w") as f:
+# 		f.write("<eps>"+"\t"+"0"+"\n")
+# 		for key, value in enumerate(lexicon):
+# 			f.write(str(value+"\t"+str(key+1)+"\n"))
+# 	with open("w2IOB_cutoff/files/automaton.txt", "w") as f:
+# 		for element in automaton:
+# 			f.write("0\t0\t"+element[0][0]+"\t"+element[0][1]+"\t"+element[1]+"\n")	
+# 		f.write("0")
 
 
 
